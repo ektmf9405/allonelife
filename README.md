@@ -34,7 +34,7 @@
 - Eclipse Photon Release (4.8.0)
 - Spring 3.9.9 Release 
 
-# 개인포트폴리오 홈페이지
+# WebProject00 홈페이지
 
  [프로젝트 기간] 2019-12-1 ~ 2019-12-20
  
