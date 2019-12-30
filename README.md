@@ -44,7 +44,6 @@
  
 ![로그아웃](https://user-images.githubusercontent.com/59007546/71588507-1effe700-2b65-11ea-8f9b-38ef06eb9ed0.png)
 ![회원가입](https://user-images.githubusercontent.com/59007546/71588538-38089800-2b65-11ea-8019-d8505a971852.png)
-![회원가입2](https://user-images.githubusercontent.com/59007546/71588513-24f5c800-2b65-11ea-999d-05496972f089.png)
 ![로그인](https://user-images.githubusercontent.com/59007546/71588510-22936e00-2b65-11ea-980f-ba3838779eb6.png)
 ![내정보수정](https://user-images.githubusercontent.com/59007546/71588523-2fb05d00-2b65-11ea-81c7-0ed2498b1513.png)
 ![탈퇴](https://user-images.githubusercontent.com/59007546/71588528-30e18a00-2b65-11ea-9668-e085eff0a47a.png)
