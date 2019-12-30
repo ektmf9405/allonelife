@@ -16,9 +16,7 @@
 </html>
 
 <style>
-body{
-background-color: black;
-}
+
 @import
 	url('https://fonts.googleapis.com/css?family=Gothic+A1&display=swap&subset=korean')
 	;
