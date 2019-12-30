@@ -1,1 +1,38 @@
-# allonelife
+# 안녕하세요. 신입개발자를 꿈꾸는 정다슬입니다.
+
+# Portfolio
+
+# allonelife 커뮤니티
+
+ [프로젝트 기간] 2019-10-04 ~ 2019-10-26
+ 
+ [프로젝트 내용] 1인가구증가로 인해 개인에게 필요한 정보를 소통하고 얻을 수 있다.
+
+ [프로젝트 참여 인원] 4명
+ 
+![메인](https://user-images.githubusercontent.com/59007546/71364737-6e339e00-25e0-11ea-91d2-d52d4f959f76.JPG)
+![메인2](https://user-images.githubusercontent.com/59007546/71364738-6e339e00-25e0-11ea-8321-c8b81bcff878.JPG)
+![메인3](https://user-images.githubusercontent.com/59007546/71364739-6e339e00-25e0-11ea-985d-c8def7d7936b.JPG)
+![고객관리](https://user-images.githubusercontent.com/59007546/71364108-87d3e600-25de-11ea-8af7-07d73354f7cd.JPG)
+![내정보수정](https://user-images.githubusercontent.com/59007546/71364706-5a883780-25e0-11ea-89f7-d59ce46787d0.JPG)
+![마이페이지](https://user-images.githubusercontent.com/59007546/71364711-5f4ceb80-25e0-11ea-950f-d1263504cf12.JPG)
+![자유 디테일](https://user-images.githubusercontent.com/59007546/71364764-7ab7f680-25e0-11ea-8ef8-f37ef3186ab2.JPG)
+![자유](https://user-images.githubusercontent.com/59007546/71364765-7b508d00-25e0-11ea-92ce-dc1fa2612bba.JPG)
+![회원 상세페이지](https://user-images.githubusercontent.com/59007546/71364791-899ea900-25e0-11ea-8d5c-3385015c1dd2.JPG)
+![회원가입](https://user-images.githubusercontent.com/59007546/71364792-8a373f80-25e0-11ea-82d9-11082c68df64.JPG)
+![회원탈퇴](https://user-images.githubusercontent.com/59007546/71364793-8a373f80-25e0-11ea-8ac7-189bbacae0b5.JPG)
+
+[본인 역할]
+- 메인 페이지의 전체적인 레이아웃 및 디자인 
+- 자유게시판의 DB구축 및 페이징처리
+- 관리자의 고객관리 및 회원탈퇴 
+- 검색기능 및 댓글기능 
+
+[개발환경]
+- Oracle SQL Developer
+- Tomcat v8.5
+- Eclipse Photon Release (4.8.0)
+- Spring 3.9.9 Release 
+
+
+
