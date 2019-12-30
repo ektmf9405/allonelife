@@ -34,5 +34,35 @@
 - Eclipse Photon Release (4.8.0)
 - Spring 3.9.9 Release 
 
+ [프로젝트 기간] 2019-12-1 ~ 2019-12-20
+ 
+ [프로젝트 내용] 개인의 기본적인 홈페이지를 구현.
 
+ [프로젝트 참여 인원] 2명
+ 
+![로그아웃](https://user-images.githubusercontent.com/59007546/71588507-1effe700-2b65-11ea-8f9b-38ef06eb9ed0.png)
+![회원가입](https://user-images.githubusercontent.com/59007546/71588538-38089800-2b65-11ea-8019-d8505a971852.png)
+![회원가입2](https://user-images.githubusercontent.com/59007546/71588513-24f5c800-2b65-11ea-999d-05496972f089.png)
+![로그인](https://user-images.githubusercontent.com/59007546/71588510-22936e00-2b65-11ea-980f-ba3838779eb6.png)
+![내정보수정](https://user-images.githubusercontent.com/59007546/71588523-2fb05d00-2b65-11ea-81c7-0ed2498b1513.png)
+![탈퇴](https://user-images.githubusercontent.com/59007546/71588528-30e18a00-2b65-11ea-9668-e085eff0a47a.png)
+![글목록](https://user-images.githubusercontent.com/59007546/71588545-3d65e280-2b65-11ea-8be6-f7e5d32668d2.png)
+![상세페이지](https://user-images.githubusercontent.com/59007546/71588549-40f96980-2b65-11ea-92a5-22c9348288ad.png)
+![수정페이지](https://user-images.githubusercontent.com/59007546/71588555-43f45a00-2b65-11ea-8da6-20fc7f9d2a8d.png)
+![api](https://user-images.githubusercontent.com/59007546/71588572-52427600-2b65-11ea-8aec-7f65e300212d.png)
+
+[본인 역할]
+- 전체적인 레이아웃 및 디자인 
+- DB구축 및 페이징처리
+- 고객관리 및 회원탈퇴 
+- 검색기능 및 댓글기능
+- 로그인 및 회원가입
+- 공공데이터를 출력
+
+
+[개발환경]
+- Oracle SQL Developer
+- Tomcat v8.5
+- Eclipse Photon Release (4.8.0)
+- Spring 3.9.9 Release 
 
