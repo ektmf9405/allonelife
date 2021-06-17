@@ -25,13 +25,13 @@ import org.springframework.web.multipart.MultipartFile;
 public class CommonServiceImpl implements CommonService {
 
 	public void emailSend(String name, String email, HttpServletRequest request) {
-		//1. ±âº»ÇüÅÂ ÀÌ¸ŞÀÏÀü¼Û
+		//1. ê¸°ë³¸í˜•íƒœ ì´ë©”ì¼ì „ì†¡
 		//simpleSend(name, email);
 		
-		//2.ÆÄÀÏÃ·ºÎ°¡´É ÀÌ¸ŞÀÏÀü¼Û
+		//2.íŒŒì¼ì²¨ë¶€ê°€ëŠ¥ ì´ë©”ì¼ì „ì†¡
 		//attachSend(name, email, request);
 		
-		//3.HTML ÅÂ±×Çü½ÄÀÇ ÀÌ¸ŞÀÏÀü¼Û
+		//3.HTML íƒœê·¸í˜•ì‹ì˜ ì´ë©”ì¼ì „ì†¡
 		htmlSend(name, email, request);
 	}
 	
@@ -39,16 +39,16 @@ public class CommonServiceImpl implements CommonService {
 		HtmlEmail mail = new HtmlEmail();
 		try {
 			setProperties(mail, name, email);
-			mail.setSubject("¤¾¤·");
+			mail.setSubject("ã…ã…‡");
 			StringBuffer content
 					= new StringBuffer("<html>");
 			content.append("<body>");
-			content.append("<h2>È¸¿ø°¡ÀÔÀ» ÃàÇÏÇÕ´Ï´Ù.</h2>");
-			content.append("<a href='http://hanuledu.co.kr'>ÇÑ¿ï°úÁ¤º¸±â</a>");
-			content.append("½º¸¶Æ®À¥&¾Û °úÁ¤<br>");
-			content.append("°¡ÀÔÀ»ÃàÇÏÇÕ´Ï´Ù<br>");
-			content.append("<input type='button' value='È®ÀÎ'"
-					+ "onclick='alert(\"Àß µÇ³ª\")' />");
+			content.append("<h2>íšŒì›ê°€ì…ì„ ì¶•í•˜í•©ë‹ˆë‹¤.</h2>");
+			content.append("<a href='http://hanuledu.co.kr'>í•œìš¸ê³¼ì •ë³´ê¸°</a>");
+			content.append("ìŠ¤ë§ˆíŠ¸ì›¹&ì•± ê³¼ì •<br>");
+			content.append("ê°€ì…ì„ì¶•í•˜í•©ë‹ˆë‹¤<br>");
+			content.append("<input type='button' value='í™•ì¸'"
+					+ "onclick='alert(\"ì˜ ë˜ë‚˜\")' />");
 			content.append("</body>");
 			content.append("</html>");
 			mail.setHtmlMsg(content.toString());
@@ -69,11 +69,11 @@ public class CommonServiceImpl implements CommonService {
 		mail.setDebug(true);
 		
 		
-		mail.setAuthentication("ektmf9405", "aa156248@@");
+		mail.setAuthentication("ektmf9405", "");
 		mail.setSSLOnConnect(true);
 		
 		
-		mail.setFrom("ektmf9405@naver.com","°ü¸®ÀÚ");
+		mail.setFrom("ektmf9405@naver.com","ê´€ë¦¬ì");
 		mail.addTo(email, name);
 	}
 	private void attachSend(String name, String email, HttpServletRequest request) {
@@ -82,10 +82,10 @@ public class CommonServiceImpl implements CommonService {
 		try {
 			setProperties(mail, name, email);
 			
-			mail.setSubject("½º¸¶Æ® À¥");
-			mail.setMsg("ÇÏÀÌ");
+			mail.setSubject("ìŠ¤ë§ˆíŠ¸ ì›¹");
+			mail.setMsg("í•˜ì´");
 			
-			EmailAttachment file = new EmailAttachment();//Ã·ºÎÆÄÀÏ°´Ã¼
+			EmailAttachment file = new EmailAttachment();//ì²¨ë¶€íŒŒì¼ê°ì²´
 			file.setPath(request.getSession()
 					.getServletContext()
 					.getRealPath("resources/img/hanul.png"));
@@ -102,8 +102,8 @@ public class CommonServiceImpl implements CommonService {
 		try {
 			setProperties(mail, name, email);
 			
-			mail.setSubject("½º¸¶Æ® À¥");
-			mail.setMsg("ÇÏÀÌ");
+			mail.setSubject("ìŠ¤ë§ˆíŠ¸ ì›¹");
+			mail.setMsg("í•˜ì´");
 			mail.send();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -111,12 +111,12 @@ public class CommonServiceImpl implements CommonService {
 	}
 	private String makeFolder(String category, String upload) {
 		StringBuffer folder = new StringBuffer(upload);
-		//D://Spring/.../smart/resources/upload/notice ±îÁö Á¢±Ù
+		//D://Spring/.../smart/resources/upload/notice ê¹Œì§€ ì ‘ê·¼
 		folder.append( File.separator + category);
-		//D://Spring/.../smart/resources/upload/notice/2019 ±îÁö Á¢±Ù
+		//D://Spring/.../smart/resources/upload/notice/2019 ê¹Œì§€ ì ‘ê·¼
 		Date now = new Date();
 		folder.append(File.separator + new SimpleDateFormat("yyyy/MM/dd").format(now));
-		//ÇØ´ç Æú´õ°¡ ÀÖ´ÂÁö È®ÀÎÇÏ¿© ¾øÀ¸¸é Æú´õ»ı¼º
+		//í•´ë‹¹ í´ë”ê°€ ìˆëŠ”ì§€ í™•ì¸í•˜ì—¬ ì—†ìœ¼ë©´ í´ë”ìƒì„±
 		File dir = new File(folder.toString());
 		if( ! dir.exists()) dir.mkdirs();
 		return folder.toString();
@@ -124,30 +124,30 @@ public class CommonServiceImpl implements CommonService {
 	
 	@Override
 	public String fileUpload(MultipartFile file, HttpSession ss, String category) {
-		//¾÷·ÎµåÇÒ ¼­¹öÀÇ ¹°¸®Àû À§Ä¡
-		//D://Spring/.../smart/resources ±îÁö Á¢±Ù
+		//ì—…ë¡œë“œí•  ì„œë²„ì˜ ë¬¼ë¦¬ì  ìœ„ì¹˜
+		//D://Spring/.../smart/resources ê¹Œì§€ ì ‘ê·¼
 		String resources= ss.getServletContext().getRealPath("resources");
-		//D://Spring/.../smart/resources/upload ±îÁö Á¢±Ù
+		//D://Spring/.../smart/resources/upload ê¹Œì§€ ì ‘ê·¼
 		String upload = resources + File.separator + "upload";
 		
 		String folder = makeFolder(category, upload);
-		//·£´ıÇÑ¾ÆÀÌµğ
-		//D://Spring/.../smart/resources/upload/2019/09/05 ±îÁö Á¢±Ù
+		//ëœë¤í•œì•„ì´ë””
+		//D://Spring/.../smart/resources/upload/2019/09/05 ê¹Œì§€ ì ‘ê·¼
 		String uuid= UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
 		try {
-			//»ı¼ºÇÑ Æú´õ¿¡ ¾÷·ÎµåÇÑ ÆÄÀÏ ÀúÀåÇÏ±â
+			//ìƒì„±í•œ í´ë”ì— ì—…ë¡œë“œí•œ íŒŒì¼ ì €ì¥í•˜ê¸°
 			file.transferTo( new File(folder, uuid) );			
 		} catch (Exception e) {
 		}
 		
-		//D://Spring/.../smart/resources/upload/2019/09/05/dd555_abc.txt ±îÁö Á¢±Ù
+		//D://Spring/.../smart/resources/upload/2019/09/05/dd555_abc.txt ê¹Œì§€ ì ‘ê·¼
 		return folder.substring(resources.length())
 					+ File.separator + uuid;
 	}
 
 	@Override
 	public File fileDownload(String name, String path, HttpSession ss, HttpServletResponse response) {
-		// ´Ù¿î·ÎµåÇÒ ÆÄÀÏ»ı¼º
+		// ë‹¤ìš´ë¡œë“œí•  íŒŒì¼ìƒì„±
 		File file = new File(ss.getServletContext().getRealPath("resources")
 				+ File.separator + path);
 		String mime = ss.getServletContext().getMimeType(name);
